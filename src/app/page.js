@@ -1,7 +1,6 @@
 import Image from "next/image";
 import littleLambLogsLogo from "./Images/LLL-logo.png";
 import Link from "next/link";
-import Welcome from "./welcome/page";
 
 export default function Home() {
   return (
