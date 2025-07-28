@@ -1,0 +1,55 @@
+'use client'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import postpartum from '../Images/postpartum.PNG';
+import pregnancy from '../Images/pregnancy.PNG';
+import community from '../Images/community.PNG';
+import resources from '../Images/resources.PNG';
+
+const slides = [
+  {
+    src: pregnancy,
+    alt: 'Pregnancy Support'
+  },
+  {
+    src: community,
+    alt: 'Community'
+  },
+  {
+    src: resources,
+    alt: 'Resources'
+  },
+  {
+    src: postpartum,
+    alt: 'Postpartum Support'
+  }
+]
+export default function Welcome() {
+  const [ slide, setSlide ] = useState(0);
+  const router = useRouter();
+
+  const nextSlide = () => {
+    slide === slides.length - 1 ? router.push('/home') : setSlide(slide + 1);
+  }
+  return (
+    <div className="bg-[#D1F1D1] min-h-screen overflow-y-hidden">
+      <div className="h-screen">
+        {slides.map((item, idx) => {
+                return <Image src={item.src} alt={item.alt} key={idx} className={slide === idx ? "slide shadow-[0px_0px_7px_#667] w-full transition-opacity" : "slide slide-hidden hidden"}/>
+            })}
+      </div>
+      <div className="flex items-center h-full p-4">
+        <Link className={slide === slides.length - 1 ? "invisible" : "text-black font-bold"} href="/home">SKIP</Link>
+        <span className="indicators flex justify-center space-x-2 w-full h-full">
+          {slides.map((_, idx) => {
+            return <button key={idx} onClick={() => setSlide(idx)} className={slide === idx ? "indicator bg-white h-2 w-2 border-none rounded-full outline-none shadow-[0px_0px_5px_#555] m-[0 0.2rem] cursor-pointer" : "h-2 w-2 border-none rounded-full outline-none shadow-[0px_0px_5px_#555] m-[0 0.2rem] cursor-pointer bg-gray-400"}></button>
+          })}
+        </span>
+        <button className="text-black font-bold" onClick={nextSlide}>{slide === slides.length - 1 ? "FINISH" : "NEXT" }</button>
+      </div>
+    
+    </div>
+  )
+}
