@@ -34,15 +34,15 @@ export default function Welcome() {
     slide === slides.length - 1 ? router.push('/home') : setSlide(slide + 1);
   }
   return (
-    <div className="bg-[#D1F1D1] min-h-screen overflow-y-hidden">
-      <div className="h-screen">
+    <div className="bg-[#D1F1D1] h-screen flex flex-col justify-between">
+      <div className="h-2/3 w-screen flex flex-col justify-center items-center">
         {slides.map((item, idx) => {
-                return <Image src={item.src} alt={item.alt} key={idx} className={slide === idx ? "slide shadow-[0px_0px_7px_#667] w-full transition-opacity" : "slide slide-hidden hidden"}/>
+                return <Image src={item.src} alt={item.alt} key={idx} className={slide === idx ? "slide transition-opacity object-contain h-screen" : "slide slide-hidden hidden"}/>
             })}
       </div>
-      <div className="flex items-center h-full p-4">
+      <div className="flex justify-between items-center p-5">
         <Link className={slide === slides.length - 1 ? "invisible" : "text-black font-bold"} href="/home">SKIP</Link>
-        <span className="indicators flex justify-center space-x-2 w-full h-full">
+        <span className="indicators flex justify-center space-x-2 w-fit h-fit">
           {slides.map((_, idx) => {
             return <button key={idx} onClick={() => setSlide(idx)} className={slide === idx ? "indicator bg-white h-2 w-2 border-none rounded-full outline-none shadow-[0px_0px_5px_#555] m-[0 0.2rem] cursor-pointer" : "h-2 w-2 border-none rounded-full outline-none shadow-[0px_0px_5px_#555] m-[0 0.2rem] cursor-pointer bg-gray-400"}></button>
           })}
