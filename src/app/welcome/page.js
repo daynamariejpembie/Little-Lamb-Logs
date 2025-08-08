@@ -31,7 +31,7 @@ export default function Welcome() {
   const router = useRouter();
 
   const nextSlide = () => {
-    slide === slides.length - 1 ? router.push('/home') : setSlide(slide + 1);
+    slide === slides.length - 1 ? router.push('/login') : setSlide(slide + 1);
   }
   return (
     <div className="bg-[#D1F1D1] h-screen flex flex-col justify-between">
@@ -41,7 +41,7 @@ export default function Welcome() {
             })}
       </div>
       <div className="flex justify-between items-center p-5">
-        <Link className={slide === slides.length - 1 ? "invisible" : "text-black font-bold"} href="/home">SKIP</Link>
+        <Link className={slide === slides.length - 1 ? "invisible" : "text-black font-bold"} href="/login">SKIP</Link>
         <span className="indicators flex justify-center space-x-2 w-fit h-fit">
           {slides.map((_, idx) => {
             return <button key={idx} onClick={() => setSlide(idx)} className={slide === idx ? "indicator bg-white h-2 w-2 border-none rounded-full outline-none shadow-[0px_0px_5px_#555] m-[0 0.2rem] cursor-pointer" : "h-2 w-2 border-none rounded-full outline-none shadow-[0px_0px_5px_#555] m-[0 0.2rem] cursor-pointer bg-gray-400"}></button>
