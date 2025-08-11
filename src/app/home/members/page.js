@@ -42,11 +42,11 @@ export default function Page() {
             {members.map(member => (
                 <li key={member.login.username} className="flex flex-col items-center p-2">
                     <Image
-                    src={member.picture.medium}
+                    src={member.picture.large}
                     alt = "Member Photo"
                     width={100}
                     height={100}
-                    className="w-3/4 p-2 xl:p-4"
+                    className="w-1/2 p-2 xl:p-4"
                     />
                     <div className="flex flex-col items-center text-sm md:text-xl xl:text-3xl">
                      <p>{member.name.first} {member.name.last}</p>
