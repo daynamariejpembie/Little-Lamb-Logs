@@ -1,7 +1,3 @@
 {
-  "/home/shepherding/page": "app/home/shepherding/page.js",
-  "/home/shepherding/diapering/page": "app/home/shepherding/diapering/page.js",
-  "/home/page": "app/home/page.js",
-  "/welcome/page": "app/welcome/page.js",
-  "/login/page": "app/login/page.js"
+  "/home/members/page": "app/home/members/page.js"
 }
