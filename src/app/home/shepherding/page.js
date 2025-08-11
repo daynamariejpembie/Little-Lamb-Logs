@@ -7,8 +7,8 @@ export default function Shepherding() {
         <div>
         <div>
           <div className="px-10 py-5">
-        <Link href="/home">Back</Link>
-      </div>
+            <Link href="/home">Back</Link>
+          </div>
         </div>
           <div>
 

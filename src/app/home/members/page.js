@@ -8,11 +8,11 @@ export default function Page() {
 
     // Fetching data from API
 
-    const [members, setMembers] = useState([]);
+    const [members, setMembers] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/randomuser.json')
+        fetch('https://randomuser.me/api/?results=21&gender=female')
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -39,16 +39,14 @@ export default function Page() {
             <Link href="/home">Back</Link>
           </div>
            <ul className="grid grid-cols-2 sm:grid-cols-3">
-            {members
-            .filter(member => member.gender === 'female')
-            .map(member => (
+            {members.map(member => (
                 <li key={member.login.username} className="flex flex-col items-center p-2">
                     <Image
-                    src={member.picture.medium}
+                    src={member.picture.large}
                     alt = "Member Photo"
                     width={100}
                     height={100}
-                    className="w-3/4 p-2 xl:p-4"
+                    className="w-1/2 p-2 xl:p-4"
                     />
                     <div className="flex flex-col items-center text-sm md:text-xl xl:text-3xl">
                      <p>{member.name.first} {member.name.last}</p>
