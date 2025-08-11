@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import Link from "next/link";
 import PeeButton from "@/app/components/diaper-change/PeeButton";
 import PoopButton from "@/app/components/diaper-change/PoopButton";
 import { useEffect, useState } from 'react';
@@ -43,6 +44,11 @@ const pageItems = changes.slice(startIndex, endIndex);
 
 
 return (
+  <div>
+    <div className="px-10 py-5">
+            <Link href="/home/shepherding">Back</Link>
+          </div>
+  
     <div className="flex flex-col items-center">
         <div className="flex flex-row justify-center space-x-10 p-10">
           <PeeButton />
@@ -65,6 +71,7 @@ return (
                 <button
                   onClick = {() => setCurrentPage((prev) => Math.max(prev - 1,1))}
                   disabled= {currentPage === 1}
+                  className={currentPage === 1 ? 'hidden' : 'block'}
                 >
                 Previous
                 </button>
@@ -72,11 +79,13 @@ return (
                 <button
                   onClick = {() => setCurrentPage((prev) => prev < Math.ceil(changes.length / itemsPerPage) ? prev + 1 : prev)}
                   disabled = {currentPage === Math.ceil(changes.length / itemsPerPage)}
+                  className={currentPage === Math.ceil(changes.length / itemsPerPage) ? 'hidden' : 'block'}
                 >
                   Next
                 </button>
             </div>
         </div>
     </div>
+  </div>
 )
 }

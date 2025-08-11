@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from 'react';
 
 export default function Page() {
@@ -34,6 +35,9 @@ export default function Page() {
 
     return (
         <div>
+          <div className="px-10 py-5">
+            <Link href="/home">Back</Link>
+          </div>
            <ul className="grid grid-cols-2 sm:grid-cols-3">
             {members
             .filter(member => member.gender === 'female')
