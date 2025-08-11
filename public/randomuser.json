@@ -1,0 +1,37 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Noelle",
+        "last": "Wiig"
+      },
+      "email": "noelle.wiig@example.com",
+      "login": {
+        "uuid": "bf32d95b-17fc-4c23-8124-ce49a810a0f2",
+        "username": "crazyrabbit926",
+        "password": "bigbig",
+        "salt": "E0UVlobe",
+        "md5": "b4deb0ac600fde91af5d525873fb2622",
+        "sha1": "1d7afcc048dd69896fc39dc3b7cb52b1acedbd5c",
+        "sha256": "d8c6488f689a777dc64df925f7a2a2a43d2cd61fedd07ef2589d1aaa159539bf"
+      },
+      "dob": {
+        "date": "1960-06-16T08:31:20.751Z",
+        "age": 65
+      },
+      "registered": {
+        "date": "2014-01-12T02:07:56.965Z",
+        "age": 11
+      },
+      "phone": "60060919"
+    }
+  ],
+  "info": {
+    "seed": "cc92605c2508d9c7",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

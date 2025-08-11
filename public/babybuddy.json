@@ -1,0 +1,18 @@
+{
+  "bmi": "http://demo.baby-buddy.net/api/bmi/",
+  "changes": "http://demo.baby-buddy.net/api/changes/",
+  "children": "http://demo.baby-buddy.net/api/children/",
+  "feedings": "http://demo.baby-buddy.net/api/feedings/",
+  "head-circumference": "http://demo.baby-buddy.net/api/head-circumference/",
+  "height": "http://demo.baby-buddy.net/api/height/",
+  "notes": "http://demo.baby-buddy.net/api/notes/",
+  "pumping": "http://demo.baby-buddy.net/api/pumping/",
+  "sleep": "http://demo.baby-buddy.net/api/sleep/",
+  "tags": "http://demo.baby-buddy.net/api/tags/",
+  "temperature": "http://demo.baby-buddy.net/api/temperature/",
+  "timers": "http://demo.baby-buddy.net/api/timers/",
+  "tummy-times": "http://demo.baby-buddy.net/api/tummy-times/",
+  "weight": "http://demo.baby-buddy.net/api/weight/",
+  "profile": "http://demo.baby-buddy.net/api/profile",
+  "schema": "http://demo.baby-buddy.net/api/schema"
+}
