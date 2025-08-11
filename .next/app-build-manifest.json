@@ -6,20 +6,25 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/home/shepherding/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/home/shepherding/page.js"
+      "static/chunks/app/page.js"
+    ],
+    "/home/members/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/home/members/page.js"
     ],
     "/home/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/home/page.js"
     ],
-    "/home/members/page": [
+    "/home/shepherding/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/home/members/page.js"
+      "static/chunks/app/home/shepherding/page.js"
     ],
     "/home/shepherding/diapering/page": [
       "static/chunks/webpack.js",

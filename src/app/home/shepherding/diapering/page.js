@@ -13,6 +13,7 @@ export default function Page() {
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
 
+
 useEffect(() => {
   fetch('/changes.json')
   .then(response => {
