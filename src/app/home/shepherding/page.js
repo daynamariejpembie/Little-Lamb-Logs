@@ -5,7 +5,11 @@ import diaperButton from '../../Images/diaperButton.png';
 export default function Shepherding() {
     return (
         <div>
-    
+        <div>
+          <div className="px-10 py-5">
+        <Link href="/home">Back</Link>
+      </div>
+        </div>
           <div>
 
             <div>
