@@ -12,7 +12,7 @@ export default function Page() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://randomuser.me/api/?results=21&gender=female')
+        fetch('https://randomuser.me/api/?results=21&gender=female&nat=us&age=40')
         .then(response => {
             if (response.ok) {
                 return response.json();
